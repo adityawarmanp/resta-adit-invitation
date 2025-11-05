@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wedding Invitation - Resta & Adit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    
+  <section class="section" style="background-image:url('assets/images/page1.png')" id="page1">
+    <div class="content" aria-label="Page 1 of invitation">
+      <!-- Page 1 rendered as image to preserve exact layout -->
+    </div>
+  </section>
+
+  <section class="section" style="background-image:url('assets/images/page2.png')" id="page2">
+    <div class="content" aria-label="Page 2 of invitation">
+      <!-- Page 2 rendered as image to preserve exact layout -->
+    </div>
+  </section>
+
+  <section class="section" style="background-image:url('assets/images/page3.png')" id="page3">
+    <div class="content" aria-label="Page 3 of invitation">
+      <!-- Page 3 rendered as image to preserve exact layout -->
+    </div>
+  </section>
+
+  <section class="section" style="background-image:url('assets/images/page4.png')" id="page4">
+    <div class="content" aria-label="Page 4 of invitation">
+      <!-- Page 4 rendered as image to preserve exact layout -->
+    </div>
+  </section>
+
+  <section class="section" style="background-image:url('assets/images/page5.png')" id="page5">
+    <div class="content" aria-label="Page 5 of invitation">
+      <!-- Page 5 rendered as image to preserve exact layout -->
+    </div>
+  </section>
+
+  <section class="section" style="background-image:url('assets/images/page6.png')" id="page6">
+    <div class="content" aria-label="Page 6 of invitation">
+      <!-- Page 6 rendered as image to preserve exact layout -->
+    </div>
+  </section>
+
+  <section class="section" style="background-image:url('assets/images/page7.png')" id="page7">
+    <div class="content" aria-label="Page 7 of invitation">
+      <!-- Page 7 rendered as image to preserve exact layout -->
+    </div>
+  </section>
+
+  </div>
+
+  <!-- Audio player -->
+  <audio id="music" class="audio-hidden" src="assets/lagu.mp3" loop></audio>
+  <button id="musicBtn" aria-label="Play or pause music">&#128266;</button>
+
+  <script>
+    const music = document.getElementById('music');
+    const btn = document.getElementById('musicBtn');
+    let playing = false;
+
+    function tryAutoplay(){{
+      music.play().then(function(){{
+        playing = true; btn.textContent = '🔊';
+      }}).catch(function(){{
+        playing = false; btn.textContent = '🔈';
+      }});
+    }}
+    window.addEventListener('load', function(){{ tryAutoplay(); }});
+
+    btn.addEventListener('click', function() {{
+      if(playing){ music.pause(); btn.textContent = '🔈'; }
+      else { music.play(); btn.textContent = '🔊'; }
+      playing = !playing;
+    }});
+  </script>
+</body>
+</html>

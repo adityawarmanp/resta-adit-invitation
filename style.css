@@ -1,0 +1,47 @@
+
+/* style.css - simple full-page sections layout */
+:root{
+  --bg:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family: Arial, Helvetica, sans-serif;background:var(--bg);color:#222}
+.container{scroll-behavior:smooth}
+.section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  padding:40px;
+}
+.content{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  background:rgba(255,255,255,0.0);
+}
+/* small music button */
+#musicBtn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  background:rgba(255,255,255,0.85);
+  z-index:9999;
+  font-size:18px;
+}
+#musicBtn:focus{outline:none}
+.audio-hidden{display:none}
+@media (max-width:600px){
+  .section{padding:20px}
+}
